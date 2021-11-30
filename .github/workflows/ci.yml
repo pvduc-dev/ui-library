@@ -20,7 +20,7 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-${{ env.NODE_VERSION }}-modules-${{ hashFiles('**/yarn.lock') }}
-        - name: Install dependencies
-          run: yarn install --frozen-lockfile
-          env:
-            CI: true
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          CI: true
