@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "author": {
+    "email": "pvduc.dev@gmail.com",
+    "name": "Pv Duc",
+    "url": "https://pvduc.dev"
+  },
+  "private": true,
+  "scripts": {
+    "prerelease": "yarn build",
+    "release": "lerna publish",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/config-lerna-scopes": "^15.0.0",
+    "eslint": "^8.3.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "git add ."
+    ]
+  }
+}
