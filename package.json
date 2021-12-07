@@ -9,7 +9,7 @@
   "scripts": {
     "prerelease": "yarn build",
     "release": "lerna publish",
-    "prepare": "husky install"
+    "prepare": "node scripts/prepare.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
