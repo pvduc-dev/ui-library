@@ -10,8 +10,9 @@
     "prerelease": "yarn build",
     "release": "lerna publish",
     "prepare": "node scripts/prepare.js",
-    "test": "echo \"Test success\" exit 0",
-    "lint": "eslint"
+    "test": "echo \"Test successfully\" exit 0",
+    "lint": "eslint",
+    "build": "echo \"Test successfully\" exit 0"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
