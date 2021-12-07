@@ -9,13 +9,17 @@
   "scripts": {
     "prerelease": "yarn build",
     "release": "lerna publish",
-    "prepare": "node scripts/prepare.js"
+    "prepare": "node scripts/prepare.js",
+    "test": "echo \"Test success\" exit 0",
+    "lint": "eslint"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@commitlint/config-lerna-scopes": "^15.0.0",
     "eslint": "^8.3.0",
+    "eslint-plugin-monorepo": "^0.3.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0"
   },
