@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 
 interface ButtonProps {
   isDisabled: boolean;
@@ -7,12 +7,12 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({ children }) => {
   return (
     <button
-      role="button"
-      type="submit"
+      role='button'
+      type='submit'
     >
       {children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

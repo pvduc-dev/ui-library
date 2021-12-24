@@ -10,7 +10,7 @@
     "release": "lerna publish",
     "prepare": "husky install",
     "test": "echo \"Test successfully\" exit 0",
-    "lint": "eslint",
+    "lint": "eslint \"packages/**/*.{ts,tsx,js,jsx}\" --fix",
     "build": "echo \"Test successfully\" exit 0"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
   },
   "lint-staged": {
     "*.ts": [
-      "npm run lint --fix",
+      "yarn lint",
       "git add ."
     ]
   }
