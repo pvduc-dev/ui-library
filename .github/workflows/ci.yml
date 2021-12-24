@@ -50,13 +50,15 @@ jobs:
     steps:
       - name: Begin CI...
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Cache node_modules
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-${{ env.NODE_VERSION }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Lint commit message
-        run: yarn run commitlint --from HEAD
+        run: yarn run commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD
         env:
           CI: true
 
