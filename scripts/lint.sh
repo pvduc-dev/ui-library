@@ -26,3 +26,4 @@ tsdxArgs+=($@)
 $node "$(yarn bin tsdx)" "${tsdxArgs[@]}"
 
 popd > /dev/null
+
